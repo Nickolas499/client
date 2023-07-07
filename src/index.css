@@ -1,13 +1,109 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rajdhani/v15/LDIxapCSOBg7S-QT7q4A.ttf) format('truetype');
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/titanone/v13/mFTzWbsGxbbS_J5cQcjykw.ttf) format('truetype');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #19191B;
+  padding: 10px;
+  color: #696A6F;
+  font-size: 1.5em;
+  font-family: rajdhani;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 1, "opsz" 48;
+}
+.AppContainer {
+  display: grid;
+  width: 100%;
+  height: calc(100% - 20px);
+  grid-template-columns: 140px repeat(1, 1fr);
+  grid-template-rows: 100px repeat(1, 1fr);
+  grid-template-areas: "aside header header header header header header header header" "aside main main main main main main main main" "aside main main main main main main main main" "aside main main main main main main main main";
+}
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: #23262D;
+}
+header .date {
+  display: flex;
+}
+header .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .dropbox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  grid-area: aside;
+  background-color: #23262D;
+}
+aside .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+}
+aside .logo img {
+  width: 80px;
+}
+aside nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+}
+aside nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+aside nav ul li div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 125px;
+  padding: 10px;
+  cursor: pointer;
+}
+aside nav ul li div :nth-child(1) {
+  font-size: 2rem;
+  padding: 5px;
+}
+aside nav ul li:hover {
+  background-color: #313139;
+  color: #01AEF0;
+}
+main {
+  grid-area: main;
 }

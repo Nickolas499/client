@@ -1,0 +1,120 @@
+// out: "../src/index.css", compress: false, sourceMap: false
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&family=Titan+One&display=swap");
+@import "./palett.less";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: @bgColor;
+  padding: 10px;
+  color: @Color;
+  font-size: 1.5em;
+  font-family: rajdhani;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 1, "opsz" 48;
+}
+
+//==============================( App Container )==============================
+.AppContainer {
+  display: grid;
+  width: 100%;
+  height: calc(100% - 20px);
+  grid-template-columns: 140px repeat(1, 1fr);
+  grid-template-rows: 100px repeat(1, 1fr);
+  grid-template-areas:
+    "aside header header header header header header header header"
+    "aside main main main main main main main main"
+    "aside main main main main main main main main"
+    "aside main main main main main main main main";
+}
+
+//==============================( Header )====================================
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  background-color: @primaryColor;
+
+  .date {
+    display: flex;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+//==============================( Aside )=====================================
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  grid-area: aside;
+  background-color: @primaryColor;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 20px;
+
+    img {
+      width: 80px;
+    }
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+
+      li {
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 125px;
+          padding: 10px;
+          cursor: pointer;
+          :nth-child(1) {
+            font-size: 2rem;
+            padding: 5px;
+          }
+        }
+
+        &:hover {
+          background-color: @secondaryColor;
+          color: @assentColor;
+        }
+      }
+    }
+  }
+}
+//==============================( Main )======================================
+main {
+  grid-area: main;
+}
