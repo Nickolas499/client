@@ -1,6 +1,6 @@
 import { Header } from "./components/Header";
 import { Aside } from "./components/Aside";
-import { Route, Routes,useNavigate, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { Charts } from "./pages/Charts";
 
