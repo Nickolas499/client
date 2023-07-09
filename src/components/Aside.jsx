@@ -1,4 +1,5 @@
 import Logo from "../img/logo.svg";
+import { Link } from "react-router-dom";
 
 export const Aside = () => {
   return (
@@ -8,12 +9,12 @@ export const Aside = () => {
       </div>
       <nav>
         <ul>
-          <li><div><span class="material-symbols-outlined">grid_view</span><span>Dashboard</span></div></li>          
-          <li><div><span class="material-symbols-outlined">Monitoring</span><span>Charts</span></div></li>
-          <li><div><span class="material-symbols-outlined">person</span><span>Profile</span></div></li>
-          <li><div><span class="material-symbols-outlined"></span><span>-</span></div></li>
-          <li><div><span class="material-symbols-outlined"></span><span>-</span></div></li>
-          <li><div> <span class="material-symbols-outlined">Shield </span><span>Admin</span></div></li>
+          <li><Link to="/"><div><span class="material-symbols-outlined">grid_view</span><span>Dashboard</span></div></Link></li>          
+          <li><Link to="/charts"><div><span class="material-symbols-outlined">Monitoring</span><span>Charts</span></div></Link></li>
+          <li><Link to="/"><div><span class="material-symbols-outlined">person</span><span>Profile</span></div></Link></li>
+          <li><Link to="/"><div><span class="material-symbols-outlined"></span><span></span></div></Link></li>
+          <li><Link to="/"><div><span class="material-symbols-outlined"></span><span></span></div></Link></li>
+          <li><Link to="/"><div> <span class="material-symbols-outlined">Shield </span><span>Admin</span></div></Link></li>
         </ul>
       </nav>
     </aside>

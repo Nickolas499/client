@@ -1,5 +1,5 @@
 // out: "../src/index.css", compress: false, sourceMap: false
-@import url("https://fonts.googleapis.com/css2?family=Rajdhani&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&family=Sigmar");
 @import "./palett.less";
 * {
   margin: 0;
@@ -19,12 +19,15 @@ body {
   font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 1, "opsz" 48;
 }
 
-//==============================( App Container )==============================
+
+  //==================================================================//
+ //                          AppContainer                            //
+//==================================================================//
 .AppContainer {
   display: grid;
   width: 100%;
-  height: calc(100% - 20px);
-  grid-template-columns: 140px repeat(1, 1fr);
+  min-height: calc(100vh - 20px);
+  grid-template-columns: 120px repeat(1, 1fr);
   grid-template-rows: 100px repeat(1, 1fr);
   grid-template-areas:
     "aside header header header header header header header header"
@@ -33,7 +36,10 @@ body {
     "aside main main main main main main main main";
 }
 
-//==============================( Header )====================================
+
+  //==================================================================//
+ //                                header                            //
+//==================================================================//
 header {
   grid-area: header;
   display: grid;
@@ -55,7 +61,9 @@ header {
   }
 }
 
-//==============================( Aside )=====================================
+  //==================================================================//
+ //                                Aside                             //
+//==================================================================//
 aside {
   display: flex;
   flex-direction: column;
@@ -84,37 +92,58 @@ aside {
     height: 100%;
     justify-content: center;
     align-items: flex-start;
+      
 
-    ul {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-
-      li {
+    ul {      
+      list-style: none;      
+      height: 100%;
+      font-weight: bold;
+      li {     
+        a {
+          text-decoration: none;
+          color: @Color;
+        }
         div {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           width: 100%;
-          height: 125px;
-          padding: 10px;
-          cursor: pointer;
+          height: 115px;
+          padding: 8px;      
+          cursor: pointer;                    
           :nth-child(1) {
             font-size: 2rem;
             padding: 5px;
           }
+          &:hover {
+            background-color: @secondaryColor;
+            color: @assentColor;
+          }
         }
-
-        &:hover {
-          background-color: @secondaryColor;
-          color: @assentColor;
-        }
-      }
+      }     
     }
   }
 }
-//==============================( Main )======================================
+
+  //==================================================================//
+ //                               MAIN                               //
+//==================================================================//
 main {
   grid-area: main;
 }
+
+
+  //==================================================================//
+ //                           DASHBOARD                              //
+//==================================================================//
+
+@import "./dasboard.less";
+
+
+
+  //==================================================================//
+ //                           CHARTS                                 //
+//==================================================================//
+
+@import "./charts.less";
