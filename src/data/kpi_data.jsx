@@ -86,8 +86,19 @@ export const kpi_data = [
       ],
     },
     {
+      initials: "MC",
+      name: "Milka Cvetkovic",
+      color: "rgba(1,174,240)",
+      shadow: "0 0 10px 0 rgba(1,174,240, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "IBO DESIGN": 6 },
+        
+      ],
+    },
+    {
       initials: "LL",
-      name: "Lauren Legrand",
+      name: "Lauren LeGrand",
       color: "rgba(144,118,211)",
       shadow: "0 0 10px 0 rgba(144,118,211, 0.5)",
       data: [
@@ -96,4 +107,93 @@ export const kpi_data = [
         
       ],
     },
+    {
+      initials: "BC",
+      name: "Bung Su Choi",
+      color: "rgb(52,181,149)",
+      shadow: "0 0 10px 0 rgba(52,181,149, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "RT",
+      name: "Roux Tadili",
+      color: "rgb(72,132,211)",
+      shadow: "0 0 10px 0 rgba(72,132,211, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "LC",
+      name: "Lucia Coto",
+      color: "rgb(208,108,166)",
+      shadow: "0 0 10px 0 rgba(208,108,166, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "DR",
+      name: "Daniel Romero",
+      color: "rgb(163,171,182)",
+      shadow: "0 0 10px 0 rgba(163,171,182, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "AV",
+      name: "Arline Vargas",
+      color: "rgba(135,65,166)",
+      shadow: "0 0 10px 0 rgba(135,65,166, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "AU",
+      name: "Adriana Ureña",
+      color: "rgba(202,81,0)",
+      shadow: "0 0 10px 0 rgba(202,81,0, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "YV",
+      name: "Yanina Viquez",
+      color: "rgba(217,175,139)",
+      shadow: "0 0 10px 0 rgba(217,175,139, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+    {
+      initials: "DA",
+      name: "Desiree Alvarez",
+      color: "rgba(98,203,231)",
+      shadow: "0 0 10px 0 rgba(98,203,231, 0.5)",
+      data: [
+        { "DIGITAL ABUT": 12 },
+        { "FULL ARCH": 6 },
+        
+      ],
+    },
+
   ]

@@ -25,11 +25,6 @@ function App() {
         return "Dashboard";
     }
   };
-
-
-
-
-
   return (
     <div className="AppContainer">
       <Header title={getTitle()}/>

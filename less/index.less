@@ -1,6 +1,26 @@
 // out: "../src/index.css", compress: false, sourceMap: false
+  //==================================================================//
+ //                         FONTS IMPORT                             //
+//==================================================================//
+
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani&family=Sigmar");
+
+  //==================================================================//
+ //                          COLOR PALETT                            //
+//==================================================================//
+
 @import "./palett.less";
+
+  //==================================================================//
+ //                        ICONS SETTINGS                            //
+//==================================================================//
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 1, "opsz" 48;
+}
+
+  //==================================================================//
+ //                          SETTINGS                                //
+//==================================================================//
 * {
   margin: 0;
   padding: 0;
@@ -15,135 +35,35 @@ body {
   font-family: rajdhani;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 1, "opsz" 48;
-}
-
-
   //==================================================================//
  //                          AppContainer                            //
 //==================================================================//
-.AppContainer {
-  display: grid;
-  width: 100%;
-  min-height: calc(100vh - 20px);
-  grid-template-columns: 120px repeat(1, 1fr);
-  grid-template-rows: 100px repeat(1, 1fr);
-  grid-template-areas:
-    "aside header header header header header header header header"
-    "aside main main main main main main main main"
-    "aside main main main main main main main main"
-    "aside main main main main main main main main";
-}
 
+@import "./app.less";
 
   //==================================================================//
  //                                header                            //
 //==================================================================//
-header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  background-color: @primaryColor;
 
-  .date {
-    display: flex;
-  }
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .dropbox {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-}
+@import "./header.less";
 
   //==================================================================//
  //                                Aside                             //
 //==================================================================//
-aside {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  height: 100%;
-  grid-area: aside;
-  background-color: @primaryColor;
 
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    padding: 20px;
-
-    img {
-      width: 80px;
-    }
-  }
-
-  nav {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: flex-start;
-      
-
-    ul {      
-      list-style: none;      
-      height: 100%;
-      font-weight: bold;
-      li {     
-        a {
-          text-decoration: none;
-          color: @Color;
-          background-color: @primaryColor;
-          
-        }
-        div {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 115px;
-          padding: 8px;    
-          transition: background-color 0.5s ease;  
-          cursor: pointer;                    
-          :nth-child(1) {
-            font-size: 2rem;
-            padding: 5px;
-          }
-          &:hover {
-            background-color: @secondaryColor;
-            color: @assentColor;
-          }
-        }
-      }     
-    }
-  }
-}
+@import "./aside.less";
 
   //==================================================================//
  //                               MAIN                               //
 //==================================================================//
-main {
-  grid-area: main;
-}
 
+@import "./main.less";
 
   //==================================================================//
  //                           DASHBOARD                              //
 //==================================================================//
 
 @import "./dasboard.less";
-
-
 
   //==================================================================//
  //                           CHARTS                                 //
