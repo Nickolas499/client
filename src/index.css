@@ -505,3 +505,37 @@ main {
 .modal-close button {
   padding: 5px 20px;
 }
+.tab-list {
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #000000;
+  padding-left: 40px;
+  box-shadow: var(--shadow2);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+  background-color: #ebe7e7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid #070707;
+  margin-top: 8px;
+}
+.tab-list-active {
+  background-color: rgba(126, 123, 123, 0.548);
+  border: 1px solid #070707;
+  border-width: 1px 1px 0 1px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: var(--shadow2);
+  gap: 10px;
+}
