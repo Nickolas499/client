@@ -1,5 +1,5 @@
 import React from 'react'
-import Dropdown from './Dropdown'
+import {Dropdown} from './Dropdown'
 export const Header = (props) => {
 
   const Username = "Ezequiel Almonte";

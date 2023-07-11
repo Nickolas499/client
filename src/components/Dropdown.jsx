@@ -1,65 +1,71 @@
-import React from "react";
-//import { IoNotificationsOutline } from "react-icons/io5";
-import {
-//   MdOutlineFavoriteBorder,
-  MdLogout,
-  MdOutlineGridView,
-  MdOutlineViewList,
-  MdManageAccounts,
-} from "react-icons/md";
+import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
-const Dropdown = (props) => {
+export const Dropdown = () => {  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const handleSelectClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+
+
+  const handleClickOutsideMenu = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutsideMenu);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutsideMenu);
+    };
+  }, []);
+
   return (
-    <nav className="dropdown-nav">
-      <ul>
-        {/* <li>
-          <span className="icon-menu">
-            <IoNotificationsOutline />
-          </span>
-        </li>
-        <li>
-          <span className="icon-menu">
-            <MdOutlineFavoriteBorder />
-          </span>
-        </li> */}
-        <li className="li-username">           
-            {props.username}          
-        </li>
-
-        <li>          
-          <div className="avatar">
-            <div className="circle">{props.initials}</div>
+    <div className="test">
+      <div className="dropdown" ref={menuRef}>
+        <div className="userName" onClick={handleSelectClick}>
+          <span className="name">Ezequiel Almonte</span>
+          <div className="userIcon">
+            <div className="circle">EA</div>
           </div>
-          <ul className="sub-menu">
-            <li className="sub-items">
-              <span className="icon-menu">
-                <MdOutlineGridView />
-              </span>
-              <p>Dashboard</p>
-            </li>
-            <li className="sub-items">
-              <span className="icon-menu">
-                <MdOutlineViewList />
-              </span>
-              <p>My Order</p>
-            </li>
-            <li className="sub-items">
-              <span className="icon-menu">
-                <MdManageAccounts />
-              </span>
-              <p>Update Profile</p>
-            </li>
-            <li className="sub-items" onClick={props.logout}>
-              <span className="icon-menu">
-                <MdLogout />
-              </span>
-              <p>Logout</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+        </div>
+        <ul className={isMenuOpen ? "menu menu-open" : "menu"}>
+          <li>
+            <Link to="/" onClick={() => handleSelectClick()}>
+              <span className="material-symbols-outlined">grid_view</span>
+              <span>Dashboard</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/charts" onClick={() => handleSelectClick()}>
+              <span className="material-symbols-outlined">Monitoring</span>
+              <span>Charts</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/profile" onClick={() => handleSelectClick()}>
+              <span className="material-symbols-outlined">person</span>
+              <span>Profile</span>
+            </Link>
+          </li>         
+          <li>
+            <Link to="/test" onClick={() => handleSelectClick()}>
+              <span className="material-symbols-outlined">T</span>
+              <span>Test</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="" onClick={() => handleSelectClick()}>
+              <span className="material-symbols-outlined">Logout</span>
+              <span>Logout</span>
+            </Link>
+          </li>
+        </ul>        
+      </div>
+    </div>
   );
 };
-
-export default Dropdown;
