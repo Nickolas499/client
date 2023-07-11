@@ -11,7 +11,7 @@
   src: url(https://fonts.gstatic.com/s/sigmar/v3/hv-XlzJgIE8a85pUbQ.ttf) format('truetype');
 }
 .material-symbols-outlined {
-  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 1, "opsz" 48;
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 1, "opsz" 48;
 }
 * {
   margin: 0;
@@ -86,7 +86,7 @@ header .dropbox {
   color: #b6b6b6;
   transition: all 0.3s ease-out;
 }
-.dropdown-nav ul li .icon-menu :hover {
+.dropdown-nav ul li .icon-menu:hover {
   color: #01AEF0;
   transform: scale(1);
   cursor: pointer;
@@ -128,7 +128,7 @@ header .dropbox {
   font-weight: bold;
 }
 .sub-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: absolute;
   background-color: #fff;
@@ -141,7 +141,6 @@ header .dropbox {
   gap: 0;
   padding: 1rem 0;
   opacity: 0;
-  display: none;
 }
 .sub-menu .sub-items {
   width: 100%;
@@ -233,7 +232,6 @@ main {
   min-width: 100%;
   height: 100%;
   background-color: #23262D;
-  border: 1px solid #F6B156;
 }
 .UsersAsigment {
   display: grid;
@@ -301,7 +299,7 @@ main {
   display: flex;
   width: 100%;
   height: 80px;
-  padding: 10px 70px;
+  padding: 10px 10px 0 70px;
   justify-content: left;
   align-items: center;
   font-size: 1rem;
@@ -396,8 +394,7 @@ main {
   display: flex;
   width: 100%;
   height: 80px;
-  padding: 10px 20px 0 80px;
-  border: 1px solid #F6B156;
+  padding: 10px 10px 0 70px;
   justify-content: left;
   align-items: center;
   font-size: 1rem;

@@ -11,10 +11,10 @@ export const Aside = () => {
         <ul>
           <li><Link to="/"><div><span class="material-symbols-outlined">grid_view</span><span>Dashboard</span></div></Link></li>          
           <li><Link to="/charts"><div><span class="material-symbols-outlined">Monitoring</span><span>Charts</span></div></Link></li>
-          <li><Link to="/"><div><span class="material-symbols-outlined">person</span><span>Profile</span></div></Link></li>
+          <li><Link to="/profile"><div><span class="material-symbols-outlined">person</span><span>Profile</span></div></Link></li>
           <li><Link to="/"><div><span class="material-symbols-outlined"></span><span></span></div></Link></li>
-          <li><Link to="/"><div><span class="material-symbols-outlined"></span><span></span></div></Link></li>
-          <li><Link to="/"><div> <span class="material-symbols-outlined">Shield </span><span>Admin</span></div></Link></li>
+          <li><Link to="/test"><div><span class="material-symbols-outlined">T</span><span>Test</span></div></Link></li>
+          <li><Link to="/admin"><div> <span class="material-symbols-outlined">Shield </span><span>Admin</span></div></Link></li>
         </ul>
       </nav>
     </aside>

@@ -3,7 +3,9 @@ import { Aside } from "./components/Aside";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Dashboard } from "./pages/Dashboard";
 import { Charts } from "./pages/Charts";
-
+import { Profile } from "./pages/Profile";
+import { Admin } from "./pages/Admin";
+import { Test } from "./pages/Test";
 
 function App() {
 //*************************************************************************************//
@@ -33,6 +35,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/charts" element={<Charts/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/admin" element={<Admin/>}/>
+          <Route path="/test" element={<Test/>}/>
         </Routes>
       </main>
     </div>
