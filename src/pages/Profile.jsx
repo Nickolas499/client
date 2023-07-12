@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {profile_data } from "../data/Line_data";
-import LineChart from "../components/charts/LineChart2";
+import {ProfileCharts} from "../components/charts/Profile_Charts";
 import { Input } from '../components/Input';
 import Radarchart from '../components/charts/Radar';
 import {radar_data} from '../data/radar-data';
@@ -37,6 +37,7 @@ export const Profile = () => {
     }
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const IBO = document.getElementById("IBO").value;
@@ -62,17 +63,15 @@ export const Profile = () => {
   const columns = ['DATE','IBO', 'ABUTMENT', 'FULL ARCH PROVICIONAL', 'FULL ARCH FINAL'];
   const columns2 = ['DATE','LS3', 'ZEISS', '3SHAPE',"COPY MILL", 'FULL ARCH'];
   const columns3 = ['DATE','IBO DESIGN', 'DIGITAL ABUTMENT',  'PHISICAL ABUTMENT', 'FULL ARCH PROVICIONAL', 'FULL ARCH FINAL'];
-
-    
-
-  
+      
 
   return(
   <div className="profile">   
-    <article className="data_entry"> 
+    <article className="profile_input"> 
     <Tabs>
+      {/*==================================(Registration)========================================================*/}
         <div label="Registration">
-        <section className="data_imput">
+        <section className="data_input">
         <h2>Registration</h2>
         <div className="data">
         <Input type="text" placeholder="0" id="IBO" value={IBO} label="IBO Received" onChange={handleInputChange}/>
@@ -82,10 +81,13 @@ export const Profile = () => {
         </div>
         <button onClick={handleSubmit}>Submit</button>
       </section>
+      <div className='table-container'>
         <Table columns={columns} data={register_data} />
         </div>
+        </div>
+      {/*====================================(Scaned)======================================================*/}
         <div label="Scaned">
-        <section className="data_imput">
+        <section className="data_input">
       <h2>Scaned</h2>
         <div className="data">
         <Input type="text" placeholder="0" id="username" value="0" label="LS3"onChange={handleInputChange}/>
@@ -96,34 +98,40 @@ export const Profile = () => {
         </div>
         <button>Submit</button>
       </section>
+      <div className='table-container'>
         <Table columns={columns2} data={scaned_data} />
         </div>
+        </div>
+        {/*=======================================(Design)===================================================*/}
         <div label="Design">
-        <section className="data_imput">
-      <h2>Design</h2>
+        <section className="data_input">
+        <h2>Design</h2>
         <div className="data">
         <Input type="text" placeholder="0" id="username" value="0" label="IBO Designed"onChange={handleInputChange}/>
-        <Input type="text" placeholder="0" id="username" value="0" label="Designed Implant Restorations "onChange={handleInputChange}/>
-        <Input type="text" placeholder="0" id="username" value="0" label="Designed Crown Restorations"onChange={handleInputChange}/>
-        <Input type="text" placeholder="0" id="username" value="0" label="Designed Implant Bridge Restorations"onChange={handleInputChange}/>
-        <Input type="text" placeholder="0" id="username" value="0" label="Designed Cemented Bridge Restorations"onChange={handleInputChange}/>
-        <Input type="text" placeholder="0" id="username" value="0" label="Designed Printed Models"onChange={handleInputChange}/>
+        <Input type="text" placeholder="0" id="username" value="0" label="Implant Restorations "onChange={handleInputChange}/>
+        <Input type="text" placeholder="0" id="username" value="0" label="Crown Restorations"onChange={handleInputChange}/>
+        <Input type="text" placeholder="0" id="username" value="0" label="Implant Bridge Restorations"onChange={handleInputChange}/>
+        <Input type="text" placeholder="0" id="username" value="0" label="Cemented Bridge Restorations"onChange={handleInputChange}/>
+        <Input type="text" placeholder="0" id="username" value="0" label="Printed Models"onChange={handleInputChange}/>
         <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Provicional"onChange={handleInputChange}/>
         <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Final"onChange={handleInputChange}/>
         </div>
         <button>Submit</button>
-      </section>
+        </section>
+      <div className='table-container'>
         <Table columns={columns3} data={design_data} />
         </div>
+        </div>
+        {/*============================================(Redesign)=====================================*/}
         <div label="Redesign">
-          <section className="data_imput">
+          <section className="data_input">
           <h2>Redesign</h2>
           <div className="data">
           <Input type="text" placeholder="0" id="username" value="0" label="IBO Designed"onChange={handleInputChange}/>
-          <Input type="text" placeholder="0" id="username" value="0" label="Designed Implant Restorations "onChange={handleInputChange}/>
-          <Input type="text" placeholder="0" id="username" value="0" label="Designed Crown Restorations"onChange={handleInputChange}/>
-          <Input type="text" placeholder="0" id="username" value="0" label="Designed Implant Bridge Restorations"onChange={handleInputChange}/>
-          <Input type="text" placeholder="0" id="username" value="0" label="Designed Cemented Bridge Restorations"onChange={handleInputChange}/>
+          <Input type="text" placeholder="0" id="username" value="0" label="Implant Restorations "onChange={handleInputChange}/>
+          <Input type="text" placeholder="0" id="username" value="0" label="Crown Restorations"onChange={handleInputChange}/>
+          <Input type="text" placeholder="0" id="username" value="0" label="Implant Bridge Restorations"onChange={handleInputChange}/>
+          <Input type="text" placeholder="0" id="username" value="0" label="Cemented Bridge Restorations"onChange={handleInputChange}/>
           <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Provicional"onChange={handleInputChange}/>
           <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Final"onChange={handleInputChange}/>
           </div>
@@ -131,51 +139,32 @@ export const Profile = () => {
           </section>
           <div className='table-container'>
           <Table columns={columns3} data={redesign_data} />
-          </div>
-          
-        </div>        
-      </Tabs>        
-      
-      
-      
-      
+          </div>          
+        </div>  
+        {/*==========================================================================================*/}      
+      </Tabs> 
     </article>
-    <article className="profile_chart">
-    <section className="profile_linechart">
-    <>
-    <LineChart
+    <article className="profile_chart_container">
+    <section className="profile_chart">    
+    <ProfileCharts
           data={profile_data}
           title="Productivity"
           name="Safety"
           height={300}
-          value1="value1"
-          value2="value2"
-          value3="value3"
+          range={[0,20]}
+          value1="IBO SCANED"
+          value2="IBO DESIGNED"
+          value3="ABUT SCANED"
+          value4="ABUT DESIGNED"
+          value5="FULL ARCH"          
         />
-      </>
-      <>
+     </section>
+     <section className="profile_Radar">
         <Radarchart data={radar_data} />
-        </>
+        <Radarchart data={radar_data} />
+        
     </section>
-    <section className="profile_radarchar">
-    {/* <div>
-      <h1>Tabs Demo</h1>
-      <Tabs>
-        <div label="Registration">
-        <Table columns={columns} data={register_data} />
-        </div>
-        <div label="Scaned">
-        <Table columns={columns2} data={scaned_data} />
-        </div>
-        <div label="Design">
-        <Table columns={columns3} data={design_data2} />
-        </div>
-        <div label="Redesign">
-        <Table columns={columns3} data={redesign_data} />
-        </div>        
-      </Tabs>
-    </div> */}
-    </section>
+    
     </article>
   </div>);
 };

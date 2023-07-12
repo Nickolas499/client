@@ -7,8 +7,8 @@ const Radarchart = (props) => {
             <PolarGrid />
             <PolarAngleAxis dataKey="subject" />
             <PolarRadiusAxis angle={120} domain={[0, 150]} />
-            <Radar name="Mike" dataKey="A" stroke="#D70771" fill="#D70771" fillOpacity={0.2} strokeWidth={2}/>
-            <Radar name="Lily" dataKey="B" stroke="#563686" fill="#563686" fillOpacity={0.2} strokeWidth={2}/>
+            <Radar name="Mike" dataKey="A" stroke="#D77617" fill="#D77617" fillOpacity={0.5} strokeWidth={2}/>
+            <Radar name="Lily" dataKey="B" stroke="#089E56" fill="#089E56" fillOpacity={0.5} strokeWidth={2}/>
             <Legend  align="center"/>
           </RadarChart>
         </ResponsiveContainer>
