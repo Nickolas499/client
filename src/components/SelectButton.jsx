@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 export const SelectButton = () => {
-  const [selectedOption, setSelectedOption] = useState("Dashboard");
+  const [selectedOption, setSelectedOption] = useState("Select");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
@@ -33,7 +33,7 @@ export const SelectButton = () => {
         <div className="option" onClick={handleSelectClick}>
           <div className="selected">{selectedOption}</div>
         </div>
-        <ul className={isMenuOpen ? "menu menu-open" : "menu"}>
+        <ul className={isMenuOpen ? "select_menu menu-open" : "select_menu"}>
           <li onClick={() => handleOptionClick("Scan Zeis")}>
             <span>Scan Zeis </span>
           </li>

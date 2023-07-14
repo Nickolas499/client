@@ -21,15 +21,15 @@
 body {
   background-color: #4a4c4d;
   color: #b6b6b6;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: rajdhani;
 }
 .AppContainer {
   display: grid;
   width: 100%;
   min-height: calc(100vh - 20px);
-  grid-template-columns: 120px repeat(1, 1fr);
-  grid-template-rows: 80px repeat(1, 1fr);
+  grid-template-columns: 80px repeat(1, 1fr);
+  grid-template-rows: 60px repeat(1, 1fr);
   grid-template-areas: "aside header header header header header header header header" "aside main main main main main main main main" "aside main main main main main main main main" "aside main main main main main main main main";
 }
 header {
@@ -53,7 +53,7 @@ header .dropbox {
   align-items: center;
 }
 .dropdown {
-  width: 250px;
+  width: 200px;
   position: relative;
 }
 .dropdown * {
@@ -76,8 +76,8 @@ header .dropbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   background-color: #01AEF0;
   box-shadow: 0 0 5px 0 #01AEF0;
   transition: box-shadow 0.3s ease-out;
@@ -90,8 +90,8 @@ header .dropbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-color: #fff;
   font-size: 1.5rem;
   font-weight: bold;
@@ -109,9 +109,9 @@ header .dropbox {
   box-shadow: 0 0 10px 0 #6FC308;
 }
 .menu {
-  width: 200px;
+  width: 150px;
   list-style: none;
-  padding: 0.5rem;
+  padding: 5px;
   background-color: #23262D;
   color: #b6b6b6;
   border-top-left-radius: 20px;
@@ -119,13 +119,13 @@ header .dropbox {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 0%;
   position: absolute;
-  top: 5em;
-  left: 45%;
-  width: 100%;
+  top: 50px;
+  left: 40%;
   transform: translateX(-50%);
   opacity: 0;
   display: none;
   transition: all 0.5s ease;
+  border: 2px solid #01AEF0;
   box-shadow: 0 0 5px 1px #01AEF0;
   z-index: 2;
 }
@@ -134,15 +134,15 @@ header .dropbox {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 0.5rem 1rem;
+  padding: 5px;
   transition: background-color 0.5s ease;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 .menu li:hover,
 .menu li a:hover {
   color: #01AEF0;
   background-color: #515257;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 .menu li a {
   display: flex;
@@ -152,7 +152,7 @@ header .dropbox {
   text-decoration: none;
 }
 .menu li a :nth-child(1) {
-  padding-right: 1rem;
+  padding-right: 10px;
 }
 .active {
   background-color: #01AEF0;
@@ -174,12 +174,12 @@ aside .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 60px;
   width: 100%;
-  padding: 20px;
+  padding: 10px;
 }
 aside .logo img {
-  width: 60px;
+  width: 45px;
 }
 aside nav {
   width: 100%;
@@ -203,19 +203,19 @@ aside nav ul li div {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 115px;
+  height: 80px;
   padding: 8px;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
 aside nav ul li div :nth-child(1) {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 5px;
 }
 aside nav ul li div:hover {
   background-color: #515257;
   color: #01AEF0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 main {
   grid-area: main;
@@ -225,43 +225,80 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  gap: 55px;
-  padding: 40px;
+  gap: 20px;
+  padding: 30px 20px 20px 30px;
   background-color: #4a4c4d;
 }
 .Dashboard_KPI {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 40px;
+  gap: 20px;
 }
-.Dashboard_KPI .KPI {
-  min-width: 100%;
-  height: 100%;
-  background-color: #23262D;
-  border: 1px solid #F6B156;
+@media (min-width: 1450px) {
+  .Dashboard_KPI {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 .UsersAsigment {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  grid-template-columns: repeat(auto-fill, minmax(190px, 2fr));
   justify-content: center;
   align-items: center;
   width: 100%;
-  gap: 40px;
+  gap: 20px;
+  margin-top: 30px;
 }
 .UsersAsigment .Users {
   width: 100%;
   height: 200px;
   background-color: #23262D;
 }
+.Dashboard_Asigment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: #23262D;
+}
+.Dashboard_Asigment h1 {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #99999916;
+  text-align: center;
+  padding: 10px;
+}
+.Dashboard_Asigment div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.Dashboard_Asigment div h2 {
+  width: 200px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+.Dashboard_Asigment div h2 span {
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
 .Kpicards {
   display: flex;
   width: 100%;
   height: 100%;
   background-color: #23262D;
-  font-size: 1rem;
+  font-size: 0.8rem;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -270,9 +307,9 @@ main {
   top: -20px;
   left: -20px;
   display: flex;
-  width: 80px;
-  height: 80px;
-  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
   font-weight: bold;
   background-color: #6FC308;
   justify-content: center;
@@ -289,8 +326,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 50%;
@@ -309,10 +346,10 @@ main {
   display: flex;
   width: 100%;
   height: 80px;
-  padding: 10px 70px;
+  padding: 10px 20px 0px 60px;
   justify-content: left;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-align: center;
   border-bottom-left-radius: 20px;
@@ -320,9 +357,8 @@ main {
 .CardContainer .CardInfo {
   display: flex;
   width: 100%;
-  height: 100%;
   justify-content: center;
-  padding-top: 10px;
+  border-bottom: 0px;
   border-bottom-left-radius: 20px;
 }
 .CardContainer .CardInfo ul {
@@ -373,9 +409,9 @@ main {
   top: -20px;
   left: -20px;
   display: flex;
-  width: 80px;
-  height: 80px;
-  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
   background-color: #6FC308;
   justify-content: center;
   align-items: center;
@@ -391,8 +427,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 50%;
@@ -404,7 +440,7 @@ main {
   display: flex;
   width: 100%;
   height: 80px;
-  padding: 10px 20px 0 80px;
+  padding: 10px 10px 0 60px;
   justify-content: left;
   align-items: center;
   font-size: 1rem;
@@ -448,14 +484,19 @@ main {
 }
 .charts_section {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 10px;
   width: 100%;
   height: 100%;
   background-color: #99999916;
+}
+@media (min-width: 1450px) {
+  .charts_section {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .charts_section .charts {
   background-color: #23262D;
@@ -572,27 +613,37 @@ main {
 }
 .data_input {
   display: grid;
-  grid-template-rows: 30px 160px 60px;
-  align-items: center;
-  padding: 10px ;
+  grid-template-rows: 35px 190px 30px;
+  gap: 5px;
+  align-items: start;
+  padding: 10px;
   padding-left: 0px;
   border-radius: 8px;
 }
-.data_input button {
-  background-color: #99999916;
-  border: none;
-  color: white;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
-  justify-self: center;
+.data_input .btn-container {
+  display: flex;
+  align-self: start;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10px;
 }
-.data_input button:hover {
-  background-color: #01AEF0;
+.data_input .btn-container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 1px 0 #01AEF0;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #b6b6b6;
+  padding: 4px 10px;
+}
+.data_input .btn-container .btn:hover {
+  box-shadow: 0 0 3px 0 #01AEF0;
+  text-shadow: 0 0 3px #01AEF0;
 }
 .data_input h2 {
   width: 100%;
@@ -600,10 +651,12 @@ main {
   text-align: center;
   line-height: 40px;
   padding: 10px 0;
+  margin-bottom: 10px;
 }
 .data {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 10px 0;
 }
 .profile_chart {
   display: flex;
@@ -633,6 +686,7 @@ main {
   padding: 0 10px;
   text-align: center;
   border-bottom: 1px solid #515257;
+  font-weight: bold;
 }
 .profile_table th {
   background-color: #515257;
@@ -641,20 +695,23 @@ main {
 .profile_table tr:nth-child(even) {
   background-color: #99999916;
 }
-.profile_table button {
-  background-color: #515257;
+.profile_table .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
   border: none;
-  color: white;
-  padding: 4px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 5px 2px;
-  cursor: pointer;
+  box-shadow: 0 0 1px 0 #01AEF0;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #b6b6b6;
+  padding: 4px 10px;
+  margin: 5px;
 }
-.profile_table button:hover {
-  background-color: #01AEF0;
+.profile_table .btn:hover {
+  box-shadow: 0 0 3px 0 #01AEF0;
+  text-shadow: 0 0 3px #01AEF0;
 }
 .table-container {
   display: grid;
@@ -757,7 +814,7 @@ main {
   border: 2px solid #6FC308;
   box-shadow: 0 0 3px 0 #6FC308;
 }
-.menu {
+.select_menu {
   list-style: none;
   padding: 5px;
   background-color: #23262D;
@@ -774,15 +831,15 @@ main {
   box-shadow: 0 0 1px 0 #01AEF0;
   z-index: 2;
 }
-.menu li {
+.select_menu li {
   width: 100%;
   border-radius: 4px;
   padding: 5px;
   transition: background-color 0.5s ease;
   font-size: 0.8rem;
 }
-.menu li:hover,
-.menu li a:hover {
+.select_menu li:hover,
+.select_menu li a:hover {
   color: #01AEF0;
   background-color: #515257;
   font-size: 0.85rem;

@@ -2,6 +2,8 @@ export const kpi_data = [
     {
       symbol: "+",
       title: "Safety Incidents and Near Misses",
+      color: "rgb(0, 255, 0)",
+      shadow: "0 0 10px 0 rgba(0, 255, 0, 0.445)",
       data: [
         { "Safety Incidents": 0 },
         { "Kamishibai Misses": 0 },
@@ -11,11 +13,15 @@ export const kpi_data = [
     {
       symbol: "Q",
       title: "Internal Remakes",
+      color: "rgb(255, 0, 0)",
+      shadow: "0 0 10px 0 rgba(255, 0, 0, 0.445)",
       data: [{ Actual: "0%" }, { Target: "0%" }],
     },
     {
       symbol: "Q",
       title: "FPY -- Redesign Rate",
+      color: "rgb(255, 0, 0)",
+      shadow: "0 0 10px 0 rgba(255, 0, 0, 0.445)",
       data: [
         { Actual: "97.8%" },
         { Target: "96.5%" },
@@ -26,11 +32,15 @@ export const kpi_data = [
     {
       symbol: "Q",
       title: "Cases to Production Support",
+      color: "rgb(0, 255, 0)",
+      shadow: "0 0 10px 0 rgba(0, 255, 0, 0.445)",
       data: [{ Actual: "3%" }, { Target: "8%" }, { "Case Received": "3" }],
     },
     {
       symbol: "D",
       title: "On Time Delivery",
+      color: "rgb(0, 255, 0)",
+      shadow: "0 0 10px 0 rgba(0, 255, 0, 0.445)",
       data: [
         { Actual: "100%" },
         { Target: "99%" },
@@ -40,7 +50,9 @@ export const kpi_data = [
     },
     {
       symbol: "P",
-      title: "Designs Per Designer",      
+      title: "Designs Per Designer", 
+      color: "rgb(0, 255, 0)",
+      shadow: "0 0 10px 0 rgba(0, 255, 0, 0.445)",     
       data: [
         { Actual: "26" },
         { "Lower Targe": "24" },
@@ -57,6 +69,8 @@ export const kpi_data = [
     {
       initials: "EA",
       name: "Ezequiel Almonte",
+      color: "rgb(0, 255, 0)",
+      shadow: "0 0 10px 0 rgba(0, 255, 0, 0.445)",
       data: [
         { "LS3": 12 },
         { "ZEISS": 6 },

@@ -24,7 +24,7 @@ function Table(props) {
             {props.columns.map((column, columnIndex) => (
               <td key={columnIndex}>{row[column]}</td>
             ))}
-            <td><button onClick={() => handleEdit(index)}>Edit</button></td>
+            <td><button className="btn" onClick={() => handleEdit(index)}>Edit</button></td>
           </tr>
         ))}
       </tbody>

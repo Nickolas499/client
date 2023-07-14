@@ -1,13 +1,11 @@
 // out:false
 
-
-
 //==================================================================//
 //                        PROFILE-CSS                               //
 //==================================================================//
 
 .profile {
-  display: flex;  
+  display: flex;
   width: 100%;
   height: 100%;
   gap: 10px;
@@ -17,13 +15,11 @@
 .profile_input {
   display: flex;
   flex-direction: column;
-  
+
   height: 100%;
-  padding: 10px;  
+  padding: 10px;
   gap: 10px;
   background-color: @primaryColor;
-  
- 
 }
 
 .profile_chart_container {
@@ -33,7 +29,6 @@
   height: 100%;
   background-color: @primaryColor;
 }
-
 
 //==================================================================//
 //                        TABS-CSS                                  //
@@ -79,74 +74,83 @@
 
 .Input {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   width: 100%;
   height: 30px;
   margin-top: 5px;
-  
-  
 }
 
 .Input_field {
   width: 50px;
   text-align: center;
-  
 }
 
 .data_input {
   display: grid;
-  grid-template-rows: 30px 160px 60px;
-  align-items: center;
-  padding: 10px ;
+  grid-template-rows: 35px 190px 30px;
+  gap: 5px;
+  align-items: start;
+  padding: 10px;
   padding-left: 0px;
   border-radius: 8px;
- 
+  
+  
 
-  button {
-    background-color: @lightGray;
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-    justify-self: center;
-    &:hover {
-      background-color: @blue;
+  .btn-container {
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px; 
+    
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 0 1px 0 @blue;
+      background-color: transparent;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: @Color;
+      padding: 4px 10px;
+      &:hover {
+        box-shadow: 0 0 3px 0 @blue;
+        text-shadow: 0 0 3px @blue;
+      }
     }
   }
   h2 {
-    
     width: 100%;
     font-size: 1.5em;
-    text-align: center;    
+    text-align: center;
     line-height: 40px;
     padding: 10px 0;
-    
+    margin-bottom: 10px;
+   
   }
 }
 
 .data {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 10px 0;
+  
 }
 
 .profile_chart {
-  display: flex;  
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   width: calc(100% - 20px);
   height: calc(50% - 10px);
-  
 }
 .profile_Radar {
-  display: flex;  
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   width: calc(100% - 20px);
   height: calc(50% - 10px);
-  
 }
 
 //==================================================================//
@@ -164,7 +168,6 @@
 .profile_table thead th {
   height: 60px;
   padding: 0 10px;
-  
 }
 
 .profile_table th,
@@ -172,10 +175,11 @@
   padding: 0 10px;
   text-align: center;
   border-bottom: 1px solid @gray;
+  font-weight: bold;
 }
 
 .profile_table th {
-  background-color:@gray;
+  background-color: @gray;
   width: 90px;
 }
 
@@ -183,26 +187,26 @@
   background-color: @lightGray;
 }
 
-.profile_table button {
-  background-color: @gray;
+.profile_table .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
   border: none;
-  color: white;
-  padding: 4px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 5px 2px;
-  cursor: pointer;
+  box-shadow: 0 0 1px 0 @blue;
+  background-color: transparent;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: @Color;
+  padding: 4px 10px;
+  margin: 5px;
   &:hover {
-    background-color: @blue;
+    box-shadow: 0 0 3px 0 @blue;
+    text-shadow: 0 0 3px @blue;
   }
 }
-
 .table-container {
   display: grid;
   width: 100%;
   height: 100%;
-  
-  
 }

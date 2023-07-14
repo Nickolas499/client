@@ -1,10 +1,10 @@
-import { useState } from 'react';
+
 import { Asigment } from "../components/Asigment"
 import { user_data } from '../data/kpi_data';
 
 
 export const Admin = () => {
-  const [username, ] = useState("Ezequiel Almonte");
+  
   return (
     <article className='adminContainer'>
       <section className='asigmentContainer'>

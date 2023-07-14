@@ -79,7 +79,9 @@ export const Profile = () => {
         <Input type="text" placeholder="0" id="FULL_ARCH_P" value={FULL_ARCH_P} label="Full Arch Provicional"onChange={handleInputChange}/>
         <Input type="text" placeholder="0" id="FULL_ARCH_F" value={FULL_ARCH_F} label="Full Arch Final"onChange={handleInputChange}/>
         </div>
-        <button onClick={handleSubmit}>Submit</button>
+        <div className='btn-container'>
+          <button className='btn' onClick={handleSubmit}>Submit</button>
+          </div>
       </section>
       <div className='table-container'>
         <Table columns={columns} data={register_data} />
@@ -96,7 +98,9 @@ export const Profile = () => {
         <Input type="text" placeholder="0" id="username" value="0" label="Copy Mill"onChange={handleInputChange}/>
         <Input type="text" placeholder="0" id="username" value="0" label="Full Arch"onChange={handleInputChange}/>
         </div>
-        <button>Submit</button>
+        <div className='btn-container'>
+          <button className='btn' onClick={handleSubmit}>Submit</button>
+          </div>
       </section>
       <div className='table-container'>
         <Table columns={columns2} data={scaned_data} />
@@ -116,7 +120,9 @@ export const Profile = () => {
         <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Provicional"onChange={handleInputChange}/>
         <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Final"onChange={handleInputChange}/>
         </div>
-        <button>Submit</button>
+        <div className='btn-container'>
+          <button className='btn' onClick={handleSubmit}>Submit</button>
+          </div>
         </section>
       <div className='table-container'>
         <Table columns={columns3} data={design_data} />
@@ -135,7 +141,10 @@ export const Profile = () => {
           <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Provicional"onChange={handleInputChange}/>
           <Input type="text" placeholder="0" id="username" value="0" label="Full Arch Final"onChange={handleInputChange}/>
           </div>
-          <button>Submit</button>
+          <div className='btn-container'>
+          <button className='btn' onClick={handleSubmit}>Submit</button>
+          </div>
+         
           </section>
           <div className='table-container'>
           <Table columns={columns3} data={redesign_data} />

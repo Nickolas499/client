@@ -1,8 +1,8 @@
 export const Kpicards = (props) => {
   return (
-    <div className="Kpicards">
+    <div className="Kpicards" >
       <div className="CardContainer">
-        <div className="Symbol"><div className="circle">{props.symbol}</div></div>
+        <div className="Symbol" style={{backgroundColor: props.color,boxShadow: props.shadow}}><div className="circle">{props.symbol}</div></div>
         <div className="CardTitle">{props.title}</div>
         <div className="CardInfo">
           <ul>

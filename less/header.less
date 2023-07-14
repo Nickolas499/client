@@ -36,7 +36,7 @@ header {
   border-bottom-left-radius: @bl;
 }
 .dropdown{        
-  width: 250px;
+  width: 200px;
   position: relative;
  
 
@@ -60,8 +60,8 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 60px;
-      height: 60px;
+      width: 45px;
+      height: 45px;
       background-color: @blue;
       box-shadow: 0 0 5px 0 @blue;
       transition: box-shadow 0.3s ease-out;
@@ -70,8 +70,8 @@ header {
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 40px;
-          height: 40px;
+          width: 35px;
+          height: 35px;
           background-color: @white;
           font-size: 1.5rem;
           font-weight: bold;
@@ -90,33 +90,33 @@ header {
 }
 
 .menu{
-  width: 200px;
+  width: 150px;
   list-style: none;
-  padding:0.5rem;
+  padding:5px;
   background-color: @primaryColor;
   color: @Color;  
   .iconRadius(20px,0%,0%,20px);
   position: absolute;        
-  top: 5em;
-  left: 45%;
-  width: 100%;
+  top: 50px;
+  left: 40%;  
   transform: translateX(-50%);
   opacity: 0;
   display: none;
   transition: all 0.5s ease ;
+  border: 2px solid @blue;
   box-shadow: 0 0 5px 1px @blue;
   z-index: 2;
 
   li{
       .iconRadius(10px,10px,10px,10px);
-      padding: 0.5rem 1rem;
+      padding: 5px;
       transition: background-color 0.5s ease;
-      font-size: 1.2rem;
+      font-size: .8rem;
 
       &:hover , a:hover{          
           color: @blue;
           background-color: @gray;
-          font-size: 1.3rem;
+          font-size: .9rem;
       }
 
       a{
@@ -126,7 +126,7 @@ header {
           color:@Color;
           text-decoration: none;
           :nth-child(1){
-              padding-right: 1rem;
+              padding-right: 10px;
           }
       }
 

@@ -22,7 +22,7 @@ const LineCharts = (props) => {
           <CartesianGrid stroke="#ffffff33"strokeDasharray="3 3" />        
           <XAxis style={{ fontSize: '12px' }}dataKey="date" textAnchor= "end" scaleToFit="true" verticalAnchor= "start"  interval={0} angle= "-45" stroke="#22ffffaa" />
           <YAxis style={{ fontSize: '12px' }} domain={props.range} stroke="#ffffffaa"/>
-          <Tooltip  style={{ backgroundColor: "red", fontSize: '12px' }}/>
+          <Tooltip contentStyle={{ backgroundColor: '#23262D', borderRadius: '5px' }} style={{ fontSize: '12px' }}/>
           <ReferenceLine y={props.threshold} label={{position: "right",value: props.threshold,fontSize: '16px',fontWeight: 'bold',fill:"#ff0000",}} stroke="#f15152" strokeWidth={1}/>
           <ReferenceLine y={props.threshold2} label={{position: "right",value: props.threshold2,fontSize: '16px',fontWeight: 'bold',fill:"#ff0000",}} stroke="#f15152" strokeWidth={1}/>
           <ReferenceLine label={{position: "right",value: props.threshold, fontSize: '16px',fontWeight: 'bold',fill:"#ff0000",}} stroke="green" strokeDasharray="3 3" segment={[{ x: props.X, y: 0 }, { x:20, y: props.Y }]} />
