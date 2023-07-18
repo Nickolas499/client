@@ -1,6 +1,7 @@
 import { user_data } from "../data/kpi_data";
 import Tabs from '../components/tabs/Tabs';
 export const Test = () => {  
+  
   return (
     <div className="Test_container">
       <ul className="Table_Asigment">
@@ -19,14 +20,14 @@ export const Test = () => {
         {user_data.map((card, index) => (
           <li className="li_item" key={index}>
           <span className="span_name">{card.name}</span>
-          <span className="span_value"><input type="checkbox" checked="checked" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
-          <span className="span_value"><input type="checkbox" checked="" /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
+          <span className="span_value"><input type="checkbox"  /><input className="input_value" type="text" /></span>
           <span className="span_btn"><button className="btn">Asign</button></span>
         </li>          
         ))}

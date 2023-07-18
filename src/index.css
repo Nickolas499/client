@@ -977,10 +977,16 @@ main {
   border: none;
   outline: none;
   border-radius: 4px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.562);
+  font-weight: bold;
 }
 .li_item .span_value .input_value:focus {
   border: 1px solid #01AEF0;
   box-shadow: 0 0 3px 0.5px #01AEF0;
+}
+.li_item .span_value .check_value {
+  font-size: 2rem;
 }
 .li_item .span_btn {
   display: flex;
